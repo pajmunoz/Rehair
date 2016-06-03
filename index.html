@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Rehair</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--inicio analytics-->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-44034020-3', 're-hair.com.ar');
+    ga('send', 'pageview');
+
+    </script>
+    <!--fin analytics-->
+</head>
+
+<body class="" ng-app="myApp">
+    <!-- FACEBOOK -->
+    <div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.4";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+    <!-- FACEBOOK -->
+    <div class="preload">
+        <div class="ed-container cross-center" style="height: 100%">
+            <div class="ed-item abcenter">
+                <figure>
+                    <img src="img/logo1.svg" alt="">
+                </figure>
+                <svg>
+                    <circle cx="90" cy="90" r="50">
+                </svg>
+            </div>
+        </div>
+    </div>
+        <div class="btn-menu-resp hasta-web">
+            <div class="icon-menu"></div>
+            <div class="bG-ico"></div>
+        </div>
+        <div id="menu" class="menu-top">
+            <div class="flex-men">
+                <div class="fb-like desde-web" data-href="https://www.facebook.com/MundoNaturalHoy?fref=ts" data-layout="button_count" style="position: absolute;bottom: 25px;left: 28%;"></div>
+                <div class="ed-item desde-web web-20">
+                    <figure class="logo-menu"><img src="img/logo.svg" alt=""></figure>
+                </div>
+                <div class="ed-item web-60 no-padding">
+                    <ul class="ed-container menu-cont">
+                        <li class="ed-item web-20 no-padding"><a href="#segunda">Cómo Funciona</a></li>
+                        <li class="ed-item web-20 no-padding"><a href="#cuarta">Producto</a></li>
+                        <li class="ed-item web-20 no-padding"><a href="#sexta">Estética</a></li>
+                        <li class="ed-item web-20 no-padding"><a href="#septima">Testimonios</a></li>
+                        <li class="ed-item web-20 no-padding"><a href="#form-bot">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="ed-item resp-1 hasta-web">
+            <div class="ed-container abcenter">
+                <div class="ed-item ant-desp base-25">
+                    <p>ANTES</p>
+                </div>
+                <div class="ed-item ant-desp base-25">
+                    <p>DESPUÉS</p>
+                </div>
+                <div class="ed-item">
+                    <figure class="logo-top"><img src="img/logo.svg" alt=""></figure>
+                    <h4>LA SOLUCIÓN PARA LA CAÍDA DEL PELO HOY</h4>
+                </div>
+            </div>
+        </div>
+        <div class="ed-item desk-1 desde-web">
+        </div>
+        <div class="ed-container" style="position:relative;">
+            <div class="ed-item">
+                <figure class="logo-desk-top desde-web"><img src="img/logo1.svg" alt=""></figure>
+            </div>
+            <div class="ed-item form-top no-padding aparecer-arriba" ng-controller="formularioCtrl">
+                <div class="ed-container">
+                    <div class="ed-item texto-call desde-web">
+                        <p><span class="ico-ph icon-telefono"></span>Llamanos hoy al</p>
+                    </div>
+                    <div class="ed-item tel-top desde-web">
+                        <h1><strong data-tel="5275-7640"><span>(011)</span>5275-7640</strong> <br><p>Hacé tu consulta con nuestro asesor</p></h1>
+                    </div>
+                    <div class="ed-item centro no-padding">
+                        <div class="btn-llamar" data-tel="2222-2222"></div>
+                    </div>
+                </div>
+                <form action="form.php" class="form-1 abcenter" method="post" name="formularioTop" ng-submit="formularioTop.$valid">
+                    <div class="ed-container">
+                     
+                        <div class="ed-item">
+                            <div class="input">
+                                <input type="text" name="nombre" ng-model="formData.nombre" placeholder="Nombre" ng-minlength="2" required>
+                                <span class="showMe" ng-if="formularioTop.$dirty && formularioTop.nombre.$error.minlength">Tu Nombre es requerido</span>
+                            </div>
+                        </div>
+                        <div class="ed-item">
+                            <div class="input">
+                                <input type="email" name="email" ng-model="formData.email" placeholder="E-mail" ng-pattern="/^([0-9a-zA-Z_]([-.\w]*[0-9a-zA-Z_.-])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/" required>
+                                <span class="showMe" ng-if="formularioTop.$dirty && formularioTop.email.$error.pattern">Colocá un mail válido</span>
+                            </div>
+                        </div>
+                        <div class="ed-item">
+                            <div class="input">
+                                <input type="number" name="cod" ng-model="formData.cod" ng-maxlength="5" ng-minlength="2" placeholder="Cod. Área" required/>
+                                <span class="showMe" ng-if="formularioTop.$dirty && formularioTop.cod.$error.minlength">El código es muy corto</span>
+                            </div>
+                        </div>
+                        <div class="ed-item">
+                            <div class="input">
+                                <input type="number" name="telefono" ng-model="formData.telefono" ng-minlength="6" placeholder="Teléfono" required/>
+                                <span class="showMe" ng-if="formularioTop.$dirty && formularioTop.telefono.$error.minlength">Colocá un teléfono válido</span>
+                            </div>
+                        </div>
+                        <!-- <div class="ed-item centro item-sexo">
+                            <div class="input">
+                                <div class="ed-container">
+                                    <div class="ed-item base-50 no-padding">
+                                        <span>Sexo</span>
+                                    </div>
+                                    <div class="ed-item base-40 no-padding input-sexo">
+                                        M
+                                        <input type="radio" name="opcion" value="M" ng-model="formData.checkbox" required=""> F
+                                        <input type="radio" name="opcion" value="F" ng-model="formData.checkbox">
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="ed-item">
+                            <input id="submit" class="btn-sub1" type="submit" value="PROBALO AHORA" ng-disabled="formularioTop.$invalid">
+                        </div>
+                    </div>
+                </form>
+                <div class="ed-item texto-call hasta-web">
+                    <p><span class="ico-ph icon-telefono"></span>Llamanos hoy al</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="ed-item tel-top hasta-movil">
+            <h1><strong><span>(011)</span>5275-7640</strong> <br><p>Hacé tu consulta con nuestro asesor</p></h1>
+        </div>
+        <div class="ed-item descuento-top aparecer-abajo">
+            <p>¡LLEVATE 50 % DE TRATAMIENTO GRATIS!</p>
+            <p class="desde-web">Oferta online únicamente</p>
+        </div>
+        <div id="primera" class="ed-item no-padding">
+            <div class="ed-container">
+                <div class="ed-item no-padding web-50">
+                    <figure class="img-calvo"></figure>
+                </div>
+                <div class="ed-item web-5 no-padding"></div>
+                <div class="ed-item cont-nopadd web-30">
+                    <div class="ed-container">
+                        <div class="ed-item titulo">
+                            <p>¿Principio de calvicie?¿Cabello fino y débil?¿Pérdida constante?</p>
+                        </div>
+                        <div class="ed-item subtitulo">
+                            <p>Hoy podes recuperar el cabello que creías perdido. Te presentamos el descubrimiento científico que ha revolucionado el tratamiento de la caída del cabello:
+                                <br>
+                                <br>
+                                <strong>REHAIR Nocturno, científicamente formulado para ayudarte a recuperar tu imagen y la seguridad.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ed-item web-10 no-padding"></div>
+                </div>
+            </div>
+            <div id="segunda" class="ed-item no-padding">
+                <div class="ed-container flex-segunda">
+                    <div class="ed-item web-40 imagen">
+                        <figure class="img-corona"></figure>
+                    </div>
+
+                    <div class="ed-item titulo aparecer-abajo">
+                        <p>CÓMO FUNCIONA</p>
+                    </div>
+                    <div class="ed-item web-15"></div>
+                    <div class="ed-item web-30 no-padding">
+                        <div class="ed-container">
+                            <div class="ed-item desde-web subtitulo aparecer-izquierda">
+                                <p>¿Estás preparado para recuperar tu cabello?</p>
+                            </div>
+                            <div class="ed-item texto aparecer-derecha">REHAIR es un serum nocturno que llegó para ayudarte. Su eficacia genera impacto gracias a la doble acción de sus componentes naturales que penetran el cuero cabelludo sin importar el tiempo transcurrido desde el inicio de la caída del cabello ni la cantidad que hayas perdido.</div>
+                        </div>
+                    </div>
+                    <div class="ed-item web-15" style="order:4;"></div>
+                </div>
+            </div>
+            <div id="tercera" class="ed-item no-padding">
+                <div class="ed-container flex-tercera">
+                    <div class="ed-item img-pack no-padding web-25">
+                        <figure class="pack"></figure>
+                        <div class="fb-like desde-web" data-href="https://www.facebook.com/MundoNaturalHoy?fref=ts" data-layout="button_count" style="position: absolute;bottom: 0px;left: 100%;"></div>
+                    </div>
+                    <div class="ed-item no-padding web-45">
+                        <div class="ed-container">
+                            <div class="ed-item no-padding" style="position:relative;">
+                                <figure class="logo aparecer-abajo"><img src="img/logo.svg" alt=""></figure>
+                            </div>
+                            <div class="ed-item datos no-padding">
+                                <div class="ed-container">
+                                    <div class="ed-item no-padding ">
+                                        <p>¡DESCUBRILO YA MISMO! SIN QUÍMICOS</p>
+                                        <ul>
+                                            <li>Lucha contra la caída más fuerte.</li>
+                                            <li>Devuelve el crecimiento.</li>
+                                            <li>Combate la alopecia.</li>
+                                            <li>99% de efectividad.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cuarta" class="">
+                <div class="ed-container cuarta-flex">
+                    <div class="ed-item titulo desde-web aparecer-abajo">PRODUCTO</div>
+                    <div class="ed-item web-15"></div>
+                    <div class="ed-item web-25 cont-nopadd">
+                        <div class="ed-container">
+                            <div class="ed-item subtitulo desde-web">
+                                <p>REHAIR actúa a tu favor</p>
+                            </div>
+                            <div class="ed-item texto">
+                                <p>
+                                    Es un producto obtenido a partir de sustancias de origen natural que estimula la acción del bulbo piloso, revitaliza el cabello desde la raíz y aumenta el grosor ¡La solución más efectiva y accesible del mercado a tu disposición ahora mismo!
+                                    <br>
+                                    <br>
+                                    <span class="desde-web">Es un serum nocturno compuesto por Aminoácidos y hierbas vegetales que controlan la caída del cabello. Estimula la acción del bulbo piloso, revitaliza el cabello desde la raíz y aumenta el grosor.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ed-item web-5 no-padding"></div>
+                    <div class="ed-item web-40 cont-nopadd">
+                        <div class="ed-container">
+                            <div class="ed-item no-padding">
+                                <figure class="piel-img"><img src="img/foliculos.jpg" alt=""></figure>
+                            </div>
+                            <div class="ed-item no-padding">
+                                <div class="ed-container botones">
+                                    <div class="ed-item no-padding base-30">
+                                        <p>Restaura</p>
+                                    </div>
+                                    <div class="ed-item no-padding base-30">
+                                        <p>Previene</p>
+                                    </div>
+                                    <div class="ed-item no-padding base-30">
+                                        <p>Fortalece</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ed-item web-15 no-padding"></div>
+                </div>
+            </div>
+            <div id="quinta" class="ed-item desde-web no-padding">
+                <div class="ed-container full">
+                    <div class="ed-item img-quinta no-padding">
+                        <div class="txt-img">ENVÍO A DOMICILIO ¡ESTÉS DONDE ESTÉS!</div>
+                    </div>
+                    <div class="ed-item texto no-padding aparecer-arriba">COMENZÁ HOY MISMO EL TRATAMIENTO REHAIR Y RECUPERÁ TU VIDA</div>
+                </div>
+            </div>
+            <div id="sexta" class="ed-item no-padding">
+                <div class="ed-container">
+                    <div class="ed-item titulo aparecer-arriba">ESTÉTICA</div>
+                    <div class="ed-item web-15"></div>
+                    <div class="ed-item web-40 desde-web cont-nopadd">
+                        <div class="ed-container">
+                    <!--<div class="ed-item">
+                        <div class="ed-container">
+                            <div class="ed-item">ANTES</div>
+                            <div class="ed-item">DESPUÉS</div>
+                        </div>
+                    </div>-->
+
+                    <div class="ed-item resp-2 desde-web">
+                        <div class="ed-container abcenter">
+                            <div class="ed-item ant-desp web-30">
+                                <p>ANTES</p>
+                            </div>
+                            <div class="ed-item ant-desp web-30">
+                                <p>DESPUÉS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <figure class="img-bold"></figure>
+                </div>
+            </div>
+            <div class="ed-item web-5 no-padding"></div>
+            <div class="ed-item web-25 fondo-blue no-padding">
+                <div class="ed-container">
+                    <div class="ed-item subtitulo desde-web no-padding">REHAIR restablece y restaura los folículos capilares desde la raíz para devolverte tu imagen y autoestima.
+                    </div>
+                    <div class="ed-item text">
+                        El problema de la calvicie puede aparecer por envejecimiento, herencia, problemas hormonales, como reacción adversa a ciertos medicamentos o por una mala nutrición. La imagen afecta el autoestima, influye en tus relaciones interpersonales y en el éxito profesional ¡Es una parte vital, No podés dejar de ocuparte!
+                    </div>
+                </div>
+            </div>
+
+            <div class="ed-item web-15"></div>
+            <div class="ed-item center tit-bot aparecer-arriba">
+                <p>¡CONTACTATE YA MISMO CON UN ASESOR REHAIR, NO DEJES CAER MÁS PELOS!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="septima" class="ed-item no-padding">
+        <div class="ed-item titulo aparecer-arriba">TESTIMONIOS</div>
+        <div class="ed-container full bg-gray">
+            <div class="ed-item no-padding testi1 aparecer-derecha">
+                <div class="ed-container">
+                    <div class="ed-item web-25"></div>
+                    <div class="ed-item web-15">
+                        <figure class="foto1"></figure>
+                    </div>
+                    <div class="ed-item web-5"></div>
+                    <div class="ed-item web-30">
+                        <div class="ed-container">
+                            <div class="ed-item nombre">Carlos</div>
+                            <div class="ed-item edad">32 años, Paternal.</div>
+                            <div class="ed-item text">"Perdía mi vida a medida que perdía mi cabellera, cuando pensé que ya no había esperanza...Rehair llegó a mi vida. Ahora me siento mejor conmigo mismo y con el mundo ¡Gracias Rehair!".</div>
+                        </div>
+                    </div>
+                    <div class="ed-item web-25"></div>
+                </div>
+            </div>
+            <div class="ed-item no-padding testi2 desde-web aparecer-izquierda">
+                <div class="ed-container">
+                    <div class="ed-item web-25"></div>
+                    <div class="ed-item web-15">
+                        <figure class="foto2"></figure>
+                    </div>
+                    <div class="ed-item web-5"></div>
+                    <div class="ed-item web-30">
+                        <div class="ed-container">
+                            <div class="ed-item nombre">Santiago</div>
+                            <div class="ed-item edad">Balvanera, 46 años.</div>
+                            <div class="ed-item text">"La gente dice que la imagen no importa, pero yo sufrí mucho a causa de la alopecia. Por suerte un conocido me contó acerca de Rehair, así que me animé a probarlo. En muy poco tiempo noté los cambios y soy más feliz".</div>
+                        </div>
+                    </div>
+                    <div class="ed-item web-25"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="form-bot" class="ed-item form-bottom no-padding" ng-controller="formularioCtrl">
+        <div class="ed-item texto-call">
+            <p><span class="ico-ph icon-telefono"></span>Llamanos hoy al</p>
+        </div>
+        <div class="ed-item tel-top">
+            <h1><strong><span>(011)</span>5275-7640</strong> <br><p>Hacé tu consulta con nuestro asesor</p></h1>
+        </div>
+        <div class="ed-item centro movil-25">
+            <div class="btn-llamar centro"></div>
+        </div>
+        <form action="form.php" class="form-2 abcenter" method="post" name="formularioTop" ng-submit="formularioTop.$valid">
+            <div class="ed-container">
+                <div class="ed-item">
+                    <div class="input">
+                        <input type="text" name="nombre" ng-model="formData.nombre" placeholder="Nombre" ng-minlength="2" required>
+                        <span class="showMe" ng-if="formularioTop.$dirty && formularioTop.nombre.$error.minlength">Tu Nombre es requerido</span>
+                    </div>
+                </div>
+                <div class="ed-item">
+                    <div class="input">
+                        <input type="email" name="email" ng-model="formData.email" placeholder="E-mail" ng-pattern="/^([0-9a-zA-Z_]([-.\w]*[0-9a-zA-Z_.-])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/" required>
+                        <span class="showMe" ng-if="formularioTop.$dirty && formularioTop.email.$error.pattern">Colocá un mail válido</span>
+                    </div>
+                </div>
+                <div class="ed-item">
+                    <div class="input">
+                        <input type="number" name="cod" ng-model="formData.cod" ng-maxlength="5" ng-minlength="2" placeholder="Cod. Área" required/>
+                        <span class="showMe" ng-if="formularioTop.$dirty && formularioTop.cod.$error.minlength">El código es muy corto</span>
+                    </div>
+                </div>
+                <div class="ed-item">
+                    <div class="input">
+                        <input type="number" name="telefono" ng-model="formData.telefono" ng-minlength="6" placeholder="Teléfono" required/>
+                        <span class="showMe" ng-if="formularioTop.$dirty && formularioTop.telefono.$error.minlength">Colocá un teléfono válido</span>
+                    </div>
+                </div>
+               <!--  <div class="ed-item centro item-sexo">
+                    <div class="input">
+                        <div class="ed-container">
+                            <div class="ed-item base-50 no-padding">
+                                <span>Sexo</span>
+                            </div>
+                            <div class="ed-item base-40 no-padding input-sexo">
+                                M
+                                <input type="radio" name="opcion" value="M" ng-model="formData.checkbox" required=""> F
+                                <input type="radio" name="opcion" value="F" ng-model="formData.checkbox">
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="ed-item">
+                    <input id="submit" class="btn-sub1" type="submit" value="PROBALO AHORA" ng-disabled="formularioTop.$invalid">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="top" style="display: -webkit-flex;">
+        <span class="icon-arriba"></span>
+    </div>
+    <div id="footer" class="ed-item full">
+        <div class="ed-container">
+            <div class="ed-item foot-subt base-80 web-90 centro">
+                <p>Si no estás conforme te devolvemos el dinero</p>
+                <hr>
+            </div>
+            <div class="ed-item foot-cont base-80 web-90 centro">
+                <p>Ante cualquier duda consulte a su médico y/o farmacéutico. No es un medicamento. Las imágenes fueron retocadas y/o modificadas digitalmente. Los resultados pueden variar de persona en persona.</p>
+            </div>
+            <div class="ed-item foot-terminos base-80 web-90 centro desde-web">
+                <p><a href="terminos.html">Términos, Condiciones y Políticas de Privacidad</a></p>
+                <p>REHAIR Copyright © 2016</p>
+                <p>All Rights Reserved - Todos los derechos reservados.</p>
+            </div>
+            <div class="ed-item foot-terminos base-80 web-90 centro hasta-web">
+                <p><a href="terminos.html">Términos, Condiciones y Políticas de Privacidad</a> REHAIR Copyright © 2016 All Rights Reserved - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/script.js"></script>
+    <script src=js/app.js></script>
+</body>
+
+</html>
